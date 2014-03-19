@@ -13,7 +13,7 @@ class TracksController < ApplicationController
   def new
     @track = Track.new
   end
-  
+
     # GET /tracks/1/edit
   def edit
     @track = Track.find(params[:id])
