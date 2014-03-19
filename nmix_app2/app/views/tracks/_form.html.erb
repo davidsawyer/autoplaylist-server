@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :artist %><br>
@@ -25,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :uri %><br>
-    <%= f.number_field :uri %>
+    <%= f.text_field :uri %>
   </div>
   <div class="actions">
     <%= f.submit %>

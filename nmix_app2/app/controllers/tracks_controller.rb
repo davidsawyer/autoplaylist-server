@@ -1,9 +1,9 @@
 class TracksController < ApplicationController
-  
+
   skip_before_filter :verify_authenticity_token
   respond_to :html, :json
 
-  # GET /tracks
+   # GET /tracks
   # GET /tracks.json
   def index
     @tracks = Track.all
@@ -13,10 +13,10 @@ class TracksController < ApplicationController
   def new
     @track = Track.new
   end
-
-  # GET /events/1/edit
+  
+    # GET /tracks/1/edit
   def edit
-    @event = Track.find(params[:id])
+    @track = Track.find(params[:id])
   end
 
   # GET /tracks/1
@@ -38,7 +38,7 @@ class TracksController < ApplicationController
   # PATCH/PUT /tracks/1.json
   def update
     @track = Track.find(params[:id])
-    @track.update_attributes(params[:track])
+    @track.update_attributes(params.require(:track).permit(:user_id, :name, :artist, :album, :uri))
     respond_with @track
   end
 
@@ -52,7 +52,7 @@ class TracksController < ApplicationController
 
   private
     def track_params
-      params.require(:track).permit(:title, :artist, :album, :uri)
+      params.require(:track).permit(:user_id, :name, :artist, :album, :uri)
     end
 
 end
