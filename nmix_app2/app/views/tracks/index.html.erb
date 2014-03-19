@@ -3,10 +3,12 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
+      <th>ID</th>
+      <th>User</th>
+      <th>Name</th>
       <th>Artist</th>
       <th>Album</th>
-      <th>URI</th>
+      <th>Uri</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,7 +18,9 @@
   <tbody>
     <% @tracks.each do |track| %>
       <tr>
-        <td><%= track.title %></td>
+        <td><%= track.id %></td>
+        <td><%= track.user_id %></td>
+        <td><%= track.name %></td>
         <td><%= track.artist %></td>
         <td><%= track.album %></td>
         <td><%= track.uri %></td>

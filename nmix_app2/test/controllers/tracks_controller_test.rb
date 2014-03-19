@@ -18,7 +18,7 @@ class TracksControllerTest < ActionController::TestCase
 
   test "should create track" do
     assert_difference('Track.count') do
-      post :create, track: { album: @track.album, artist: @track.artist, length: @track.length, title: @track.title }
+      post :create, track: { album: @track.album, artist: @track.artist, name: @track.name, uri: @track.uri, user_id: @track.user_id }
     end
 
     assert_redirected_to track_path(assigns(:track))
@@ -35,7 +35,7 @@ class TracksControllerTest < ActionController::TestCase
   end
 
   test "should update track" do
-    patch :update, id: @track, track: { album: @track.album, artist: @track.artist, length: @track.length, title: @track.title }
+    patch :update, id: @track, track: { album: @track.album, artist: @track.artist, name: @track.name, uri: @track.uri, user_id: @track.user_id }
     assert_redirected_to track_path(assigns(:track))
   end
 
