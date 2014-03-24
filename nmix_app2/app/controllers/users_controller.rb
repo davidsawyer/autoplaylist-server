@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
- 
+
   skip_before_filter :verify_authenticity_token
   respond_to :html, :json
 
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-  
+
     # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
@@ -23,6 +23,14 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    respond_with @user
+  end
+
+  # POST /users
+  # POST /users.json
+  def create
+    @user = User.new(user_params)
+    @user.save
     respond_with @user
   end
 
