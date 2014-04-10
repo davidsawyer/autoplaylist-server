@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @event.id %>
+</p>
+
+<p>
+  <strong>Users:</strong>
+
+  <%= @event.users.map(&:uri).join(', ') %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
