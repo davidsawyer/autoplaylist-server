@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-NmixApp2::Application.config.secret_key_base = 'c33a741bc58d263d226aaa8dc847e75c0d91089d9967d0e6c9c179ab16aa230b04c519c39635bd756854f1294e6773aa00a7c68064d180fc686687f89b6c4655'
+NmixApp2::Application.config.secret_key_base = 'a015be0be04bb435aa988c35287f32d183ea28d6570c4e4c4df6140feaa499f0410523c7995f7cfc8213cb8f393403fabd2004624e9753a0396fc4b2e6ad6821'
