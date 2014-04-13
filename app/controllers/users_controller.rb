@@ -52,7 +52,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(:uri, :event_id)
+      params.require(:user).permit(:uri, :event_id, tracks_attributes: [:id, :uri, :user_uri])
     end
 
 end

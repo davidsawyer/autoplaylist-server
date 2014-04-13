@@ -34,14 +34,6 @@ class TracksController < ApplicationController
     respond_with @track
   end
 
-  # PATCH/PUT /tracks/1
-  # PATCH/PUT /tracks/1.json
-  def update
-    @track = Track.find(params[:id])
-    @track.update_attributes(params.require(:track).permit(:user_id, :name, :artist, :album, :uri))
-    respond_with @track
-  end
-
   # DELETE /tracks/1
   # DELETE /tracks/1.json
   def destroy
@@ -52,7 +44,7 @@ class TracksController < ApplicationController
 
   private
     def track_params
-      params.require(:track).permit(:uri, :user_id)
+      params.require(:track).permit(:uri, :user_uri)
     end
 
 end
