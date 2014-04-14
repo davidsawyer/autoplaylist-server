@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Uri</th>
+      <th>User</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,6 +15,7 @@
     <% @tracks.each do |track| %>
       <tr>
         <td><%= track.uri %></td>
+        <td><%= track.user_uri %></td>
         <td><%= link_to 'Show', track %></td>
         <td><%= link_to 'Edit', edit_track_path(track) %></td>
         <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>

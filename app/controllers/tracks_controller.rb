@@ -22,7 +22,7 @@ class TracksController < ApplicationController
   # GET /tracks/1
   # GET /tracks/1.json
   def show
-    @track = Track.find(params[:uri])
+    @track = Track.find(params[:id])
     respond_with @track
   end
 
